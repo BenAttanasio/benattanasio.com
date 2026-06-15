@@ -1,0 +1,20 @@
+# --- Private working files: never publish ---
+Human Writing Style Prompt.md
+testimonials/
+
+# --- Secrets / env (should never exist in a static repo, blocked anyway) ---
+.env
+.env.*
+*.pem
+*.key
+.vercel/
+
+# --- Local scratch / screenshots ---
+_shot_*.png
+*.local.png
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
