@@ -1,0 +1,23 @@
+# Ben Attanasio
+
+> AI automation builder and FinOps engineer. Founder of AI Builder Society (https://www.aibuildersociety.com), a free community where you learn to build with AI and land your first paying AI automation client in 30 days. 6M+ views on AI content, in IT since 2018, paid client work across air purifier brands, education, and finance.
+
+## Pages
+
+- [Home](https://benattanasio.com/): Land your first paying AI automation client in 30 days through AI Builder Society, a free community run by Ben Attanasio.
+- [Blog](https://benattanasio.com/blog): Practical guides on building with AI, n8n automations, Claude Code, and learning to build in a free community.
+
+## Blog
+
+- [The AI cold email system I use to book sales calls](https://benattanasio.com/blog/ai-cold-email-system-to-book-sales-calls): A seven-layer AI cold email system that books 15 to 30 sales calls a month using n8n, Apollo, Apify, AI personalization, and Instantly. Every tool named, every step documented.
+- [How to build anything with AI](https://benattanasio.com/blog/how-to-build-anything-with-ai): Pick the right architecture first, from a chatbot to a VPS, and stop at the first one that does your job. The full cheatsheet plus a CLAUDE.md starter.
+- [How to get paying AI automation clients from zero](https://benattanasio.com/blog/paying-ai-automation-clients-from-zero): The path from your first Upwork video proposal to a retainer: one niche, Make.com or n8n, show the build on screen, scope on a call, over-deliver.
+- [Free Skool communities for AI builders in 2026](https://benattanasio.com/blog/free-skool-communities-for-ai-builders-2026): How free Skool communities for AI builders work, how free and paid setups compare, and how to pick one that gets you to a first working build fast.
+
+## Links
+
+- [AI Builder Society (free community)](https://www.aibuildersociety.com)
+- [YouTube](https://www.youtube.com/@BenAttanasio)
+- [X](https://x.com/BenAttanasio)
+- [Sift (daily research briefing)](https://sift.scalingsidekick.com/)
+- [Gumroad (free templates and systems)](https://benattanasio.gumroad.com/)
