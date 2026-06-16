@@ -288,7 +288,7 @@ section.block h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; }
   color: var(--text-dim);
   font-size: 0.9rem;
 }
-.trust a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; margin: 0 0.6rem; }
+.trust a { color: var(--text-dim); text-decoration: underline; text-underline-offset: 3px; }
 .trust a:hover { color: var(--accent-2); }
 
 /* ---------- footer ---------- */
@@ -359,6 +359,30 @@ footer .copy { margin-top: 2.5rem; color: var(--text-dim); font-size: 0.8rem; op
 .article-cta p { font-size: 1.1rem; margin-bottom: 1.25rem; }
 
 .faq h3 { font-size: 1.15rem; margin-top: 1.6rem; }
+
+/* code block (e.g. CLAUDE.md starter) */
+.article pre {
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.article pre code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  white-space: pre;
+  color: var(--text);
+}
+.article p code, .article li code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  background: var(--bg-soft);
+  border-radius: 5px;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.9em;
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 600px) {

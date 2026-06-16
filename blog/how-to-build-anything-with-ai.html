@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to build anything with AI</title>
+  <meta name="description" content="To build anything with AI, pick the right form first. Run from the most hands-off, a chatbot, to the most hands-on, a VPS, and stop at the first one that does your job. Here's the full cheatsheet.">
+  <link rel="canonical" href="https://benattanasio.com/blog/how-to-build-anything-with-ai">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ben Attanasio">
+  <meta property="og:title" content="How to build anything with AI">
+  <meta property="og:description" content="Pick the right form first, from a chatbot to a VPS, and stop at the first one that does your job. The full cheatsheet plus a CLAUDE.md starter.">
+  <meta property="og:url" content="https://benattanasio.com/blog/how-to-build-anything-with-ai">
+  <meta property="og:image" content="https://benattanasio.com/assets/ben.jpg">
+  <meta property="article:published_time" content="2026-06-15">
+  <meta property="article:modified_time" content="2026-06-15">
+  <meta property="article:author" content="Ben Attanasio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to build anything with AI">
+  <meta name="twitter:description" content="Pick the right form first, from a chatbot to a VPS, and stop at the first one that does your job.">
+  <meta name="twitter:image" content="https://benattanasio.com/assets/ben.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to build anything with AI",
+    "description": "To build anything with AI, pick the right form first. Run from the most hands-off, a chatbot, to the most hands-on, a VPS, and stop at the first one that does your job. Here's the full cheatsheet.",
+    "image": "https://benattanasio.com/assets/ben.jpg",
+    "datePublished": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "author": { "@type": "Person", "name": "Ben Attanasio", "url": "https://benattanasio.com/" },
+    "publisher": { "@type": "Person", "name": "Ben Attanasio" },
+    "mainEntityOfPage": "https://benattanasio.com/blog/how-to-build-anything-with-ai"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When should I use a chatbot versus Claude Code?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Use a vanilla chatbot like Claude or ChatGPT for one-off deliverables: a doc, an image, research, a summary, an analysis, or a script you need once. Use Claude Code when you want to build or change real files and systems with the AI doing the work while you steer. The rule of thumb is that a chatbot makes a thing once, and Claude Code builds and edits a project that lives in a folder." }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I need n8n instead of an AI tool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Reach for n8n or another low-code flow when you have a repeatable multi-app automation that a non-coder needs to own and that should come out the same way every run. AI is the right call when an output can vary because a model is deciding. If the steps never change and have to be exact, a plain script or an n8n flow beats putting an AI in the loop." }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between a Skill and a Subagent?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A Skill is a set of rules or a process you keep repeating to Claude Code, saved so it follows them every time. A Subagent is a focused helper that Claude delegates to on its own, based on its description, in a separate context. Use a Skill to stop repeating yourself, and a Subagent to hand off a big or repeatable sub-job." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to host anything to build with AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Often not. A Claude Code Routine runs an agentic job on a schedule in Anthropic's cloud, so your machine can be off. A Vercel or Netlify page gives people a link with no server to manage. You only need a VPS when something has to stay on 24/7 and you'll maintain it yourself, which means networking, monitoring, and backups forever." }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I build my own MCP server?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Reaching your own tools and data like Gmail, Drive, Notion, GitHub, or Slack is usually not a build. You turn on a Connector in settings and it works in both the Claude app and Claude Code. You only build your own MCP server when your tool is custom and has no connector yet." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://benattanasio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://benattanasio.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "How to build anything with AI", "item": "https://benattanasio.com/blog/how-to-build-anything-with-ai" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="wordmark">Ben Attanasio<span class="dot">.</span></a>
+      <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join AI Builder Society (free)</a>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/blog">Blog</a> / How to build anything with AI
+      </nav>
+
+      <h1>How to build anything with AI</h1>
+      <p class="updated">Updated June 2026</p>
+
+      <p class="answer">
+        To build anything with AI, pick the right form first. The forms run from the most hands-off, where someone else runs everything and you just ask, to the most hands-on, where you run it yourself. Start at the top with a vanilla chatbot for one-off work, move to Claude Code to build real files, a Claude Code Routine for scheduled jobs in the cloud, n8n for repeatable multi-app automations, and a VPS only when something has to stay on 24/7. Go down the list only as far as your job actually needs.
+      </p>
+
+      <p>
+        The biggest time-waste in building is reaching for the wrong form. Someone spends a weekend on a full app when one chat message would have done it. Someone else keeps pasting prompts into a chatbot every day for a job that could just run itself. So before you build, choose the form on purpose.
+      </p>
+
+      <h2>How to choose in 60 seconds</h2>
+      <p>
+        Ask these five questions about whatever you want to build:
+      </p>
+      <ul>
+        <li>Does it need to come out the same way every single time you run it?</li>
+        <li>Does it run once, or over and over on a schedule?</li>
+        <li>Is it just for you, or do other people need to use it?</li>
+        <li>Does it need a screen people click through, or can it run quietly in the background?</li>
+        <li>Does it need to remember things between runs, or does each run start fresh?</li>
+      </ul>
+      <p>
+        Your answers point you at a form. If you just need a thing made once, that's a chatbot. If you want to build or change real files while you steer, that's Claude Code. If you want an agentic job to run on a schedule without you sitting there, that's a Claude Code Routine in the cloud. If you have a recurring job whose steps never change, that's a plain script on a schedule with no AI in the loop. If you want a repeatable multi-app automation a non-coder can own, that's n8n. If it has to stay on 24/7 and you'll maintain it, that's a VPS.
+      </p>
+
+      <h2>The cheatsheet</h2>
+      <p>
+        Ordered from the most hands-off at the top to the most hands-on at the bottom. Start at the top and go down only as far as your job needs, because closer to the top means less for you to run and maintain. The last column tells you whether the output is reliably identical, which you want for anything that has to be exact, or whether it varies because an AI is deciding.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Best for</th>
+            <th>Same every run?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vanilla chatbot (Claude / ChatGPT app)</td>
+            <td>One-off deliverables: docs, images, research, summaries, drafts, analysis, code</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Claude Code (interactive)</td>
+            <td>Building or changing real files and systems while you steer</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Claude Code Routine (scheduled)</td>
+            <td>An agentic job that runs on a schedule in the cloud, your machine off</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Plain script on a schedule (cron / Task Scheduler)</td>
+            <td>A recurring job whose steps never change, no AI in the loop</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>n8n / low-code flow</td>
+            <td>A repeatable multi-app automation a non-coder can own</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Skill or Subagent</td>
+            <td>Reusable rules (Skill), or a helper Claude delegates to in its own context (Subagent)</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td>Vercel / Netlify page</td>
+            <td>A link you send people, no login or database</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>CLI tool</td>
+            <td>A terminal command you or other devs run</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Local script / batch file</td>
+            <td>Quick personal jobs you run by hand</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>VPS</td>
+            <td>An always-on service you fully control</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Connectors usually beat building</h2>
+      <p>
+        Reaching your own tools and data, like Gmail, Drive, Notion, GitHub, and Slack, is usually not a build. Turn on a Connector in settings and it works in both the Claude app and Claude Code. You only build your own MCP server when your tool is custom and has no connector yet. So before you write any integration, check whether a connector already covers it.
+      </p>
+
+      <div class="article-cta">
+        <p>That's the map. AI Builder Society is a free Skool community where your first build runs in about 10 minutes, with templates and people building the same way.</p>
+        <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary">Join AI Builder Society (free)</a>
+      </div>
+
+      <h2>The calls you keep for a human</h2>
+      <p>
+        Some decisions stay with a person: money, hiring, legal, and anything you can't undo. AI is great for pulling the facts together and laying out your options, and the decision itself should be yours. The reason is simple. AI gives a slightly different answer every time you ask, and you don't want that on something irreversible.
+      </p>
+
+      <h2>Your CLAUDE.md starter</h2>
+      <p>
+        If you go past a plain chatbot, this is the one file that makes the rest easy. CLAUDE.md is a plain text file named CLAUDE.md, saved in your project folder. Claude Code reads it every time it works there, so your rules stick without you repeating them. This starter works as-is. Paste it, then add your project's specifics over time.
+      </p>
+      <pre><code># How we work here
+
+- Before anything big, restate what I asked in one line plus your plan, then wait for my go-ahead.
+- Make the smallest change that does the job. No extra files, no scope creep.
+- Match the patterns and style already in the project.
+- Never touch anything live (databases, deploys, real accounts) without asking first.
+- Keep API keys and secrets out of the code.
+- If you're guessing or unsure, stop and ask instead of inventing.
+- When you're done, tell me what changed and how to check it works.</code></pre>
+
+      <h2>Build something today</h2>
+      <p>
+        Pick the form closest to the top of the cheatsheet that still does your job, make a folder for it, drop in the CLAUDE.md starter, then open Claude Code in that folder and tell it what you want until it's right. If you want the templates and a group of people building this way, <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="textlink">join AI Builder Society for free</a> and build your first thing today.
+      </p>
+
+      <h2 class="faq">FAQ</h2>
+      <div class="faq">
+        <h3>When should I use a chatbot versus Claude Code?</h3>
+        <p>Use a vanilla chatbot like Claude or ChatGPT for one-off deliverables: a doc, an image, research, a summary, an analysis, or a script you need once. Use Claude Code when you want to build or change real files and systems with the AI doing the work while you steer. The rule of thumb is that a chatbot makes a thing once, and Claude Code builds and edits a project that lives in a folder.</p>
+
+        <h3>When do I need n8n instead of an AI tool?</h3>
+        <p>Reach for n8n or another low-code flow when you have a repeatable multi-app automation that a non-coder needs to own and that should come out the same way every run. AI is the right call when an output can vary because a model is deciding. If the steps never change and have to be exact, a plain script or an n8n flow beats putting an AI in the loop.</p>
+
+        <h3>What's the difference between a Skill and a Subagent?</h3>
+        <p>A Skill is a set of rules or a process you keep repeating to Claude Code, saved so it follows them every time. A Subagent is a focused helper that Claude delegates to on its own, based on its description, in a separate context. Use a Skill to stop repeating yourself, and a Subagent to hand off a big or repeatable sub-job.</p>
+
+        <h3>Do I need to host anything to build with AI?</h3>
+        <p>Often not. A Claude Code Routine runs an agentic job on a schedule in Anthropic's cloud, so your machine can be off. A Vercel or Netlify page gives people a link with no server to manage. You only need a VPS when something has to stay on 24/7 and you'll maintain it yourself, which means networking, monitoring, and backups forever.</p>
+
+        <h3>When do I build my own MCP server?</h3>
+        <p>Reaching your own tools and data like Gmail, Drive, Notion, GitHub, or Slack is usually not a build. You turn on a Connector in settings and it works in both the Claude app and Claude Code. You only build your own MCP server when your tool is custom and has no connector yet.</p>
+      </div>
+
+      <p>Related: <a href="/blog/paying-ai-automation-clients-from-zero" class="textlink">how to get paying AI automation clients from zero</a> and <a href="/blog/ai-cold-email-system-to-book-sales-calls" class="textlink">the AI cold email system I use to book sales calls</a>.</p>
+
+      <p style="margin-top:2.5rem;"><a href="/blog" class="textlink">← Back to all posts</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <h2>Learn to build with AI.</h2>
+      <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary">Join AI Builder Society (free)</a>
+      <p class="copy">BEN ATTANASIO © 2026 · Austin, TX</p>
+    </div>
+  </footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
