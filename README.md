@@ -1,6 +1,6 @@
 # benattanasio.com
 
-Personal site and blog for Ben Attanasio. A conversion-focused landing page plus an SEO/GEO-optimized blog that funnels visitors to the free [AI Builder Society](https://www.aibuildersociety.com) community.
+Personal site and blog for Ben Attanasio. A conversion-focused landing page plus an SEO/GEO-optimized blog that funnels visitors to the free [AI Builder Society](https://www.aibuildersociety.com) community, where they build their first working AI assistant in about 10 minutes.
 
 Static HTML, no build step, deployed on Vercel.
 

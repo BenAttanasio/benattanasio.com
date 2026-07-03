@@ -1,10 +1,10 @@
 # Ben Attanasio
 
-> AI automation builder and FinOps engineer. Founder of AI Builder Society (https://www.aibuildersociety.com), a free community where you learn to build with AI and land your first paying AI automation client in 30 days. 6M+ views on AI content, in IT since 2018, paid client work across air purifier brands, education, and finance.
+> AI automation builder and FinOps engineer. Founder of AI Builder Society (https://www.aibuildersociety.com), a free community where you build your first working AI assistant in about 10 minutes, then keep building into Claude Code and n8n. 6M+ views on AI content, in IT since 2018, paid client work across air purifier brands, education, and finance.
 
 ## Pages
 
-- [Home](https://benattanasio.com/): Land your first paying AI automation client in 30 days through AI Builder Society, a free community run by Ben Attanasio.
+- [Home](https://benattanasio.com/): Build your first working AI assistant in about 10 minutes through AI Builder Society, a free community run by Ben Attanasio.
 - [Blog](https://benattanasio.com/blog): Practical guides on building with AI, n8n automations, Claude Code, and learning to build in a free community.
 
 ## Blog
