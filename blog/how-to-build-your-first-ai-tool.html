@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to build your first AI tool</title>
+  <meta name="description" content="To build your first AI tool, pick a task you've done 3 times in the last 2 weeks, set up a Claude Project for it, let Claude write its own instructions, and fine-tune as you go. About 10 minutes, no code.">
+  <link rel="canonical" href="https://benattanasio.com/blog/how-to-build-your-first-ai-tool">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ben Attanasio">
+  <meta property="og:title" content="How to build your first AI tool">
+  <meta property="og:description" content="Build your first AI tool in about 10 minutes with Claude Projects. Pick a repeated task, let Claude write its own prompt, and fine-tune it as you go. No code needed.">
+  <meta property="og:url" content="https://benattanasio.com/blog/how-to-build-your-first-ai-tool">
+  <meta property="og:image" content="https://benattanasio.com/assets/ben.jpg">
+  <meta property="og:image:alt" content="Ben Attanasio">
+  <meta property="article:published_time" content="2026-07-18T09:00:00-05:00">
+  <meta property="article:modified_time" content="2026-07-18T09:00:00-05:00">
+  <meta property="article:author" content="Ben Attanasio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@BenAttanasio">
+  <meta name="twitter:creator" content="@BenAttanasio">
+  <meta name="twitter:title" content="How to build your first AI tool">
+  <meta name="twitter:description" content="Build your first AI tool in about 10 minutes with Claude Projects. Pick a repeated task, let Claude write its own prompt, and fine-tune it as you go.">
+  <meta name="twitter:image" content="https://benattanasio.com/assets/ben.jpg">
+  <meta name="twitter:image:alt" content="Ben Attanasio">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to build your first AI tool",
+    "description": "To build your first AI tool, pick a task you've done 3 times in the last 2 weeks, set up a Claude Project for it, let Claude write its own instructions, and fine-tune as you go. About 10 minutes, no code.",
+    "image": "https://benattanasio.com/assets/ben.jpg",
+    "datePublished": "2026-07-18T09:00:00-05:00",
+    "dateModified": "2026-07-18T09:00:00-05:00",
+    "author": { "@type": "Person", "name": "Ben Attanasio", "url": "https://benattanasio.com/" },
+    "publisher": { "@type": "Person", "name": "Ben Attanasio" },
+    "mainEntityOfPage": "https://benattanasio.com/blog/how-to-build-your-first-ai-tool"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need to know how to code to build my first AI tool?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The whole build happens inside a Claude Project on claude.ai: you write instructions in plain language, Claude does the drafting, and no code shows up anywhere. The only requirement is a Claude account." }
+      },
+      {
+        "@type": "Question",
+        "name": "What should my first AI build be?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Automate a task you already repeat. The rule: if you've done the same task 3 times in the last 2 weeks, it qualifies. Email replies in your voice, meal planning, marketplace listings, and workout plans are all good first builds, because you already know what a good output looks like." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I make Claude write in my style?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Provide it one good and one bad example of writing. Paste the exact quotes into the session where you're creating your prompt, and Claude will adhere to the writing style more strictly than if you just tell it 'do this' and 'don't do that.'" }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between a Claude Project and Claude Code?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A Claude Project is a workspace inside claude.ai that remembers your instructions, files, and preferences, which fits repeated chat tasks like drafting emails. Claude Code builds and changes real files and systems in a folder on your computer. Start with a Project; move to Claude Code when you want to build software." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a first AI build take?",
+        "acceptedAnswer": { "@type": "Answer", "text": "About 10 minutes. Create the project, have Claude research prompting best practices and write its own instructions, paste in a good and a bad example of your writing, and test it on something from your inbox. The fine-tuning after that happens while you use it." }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://benattanasio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://benattanasio.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "How to build your first AI tool", "item": "https://benattanasio.com/blog/how-to-build-your-first-ai-tool" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="wordmark">Ben Attanasio<span class="dot">.</span></a>
+      <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Join AI Builder Society (free)</a>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container narrow">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/blog">Blog</a> / How to build your first AI tool
+      </nav>
+
+      <h1>How to build your first AI tool</h1>
+      <p class="updated">Updated July 2026</p>
+
+      <p class="answer">
+        To build your first AI tool, pick a task you've done 3 times in the last 2 weeks, set up a Claude Project for it on claude.ai, have Claude write its own instructions from a good and a bad example of your writing, test it on something from your inbox, and update the instructions as you go to fine-tune your results. The whole build takes about 10 minutes and involves no code.
+      </p>
+
+      <p>
+        Plenty of people watch AI videos every week and still haven't built anything with the tools they keep hearing about. The usual reason is that the first project feels like it needs to be impressive, so it never gets started. A first build should be small enough to finish in one sitting, useful enough that you open it again tomorrow, and simple enough that no code is involved.
+      </p>
+      <p>
+        This walkthrough builds exactly that kind of tool in about 10 minutes: an email drafter that takes any rude email you paste in and writes a calm reply in your voice. The same process works for meal planning, marketplace listings, workout plans, or whichever part of your job repeats every week. It's also the exact first build we do inside <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="textlink">AI Builder Society</a>, the free community I run for people learning how to start with AI, so every step below has been walked by beginners many times.
+      </p>
+
+      <h2>The five parts of the build</h2>
+      <p>
+        The tool is a Claude Project, which is a workspace inside claude.ai that remembers your instructions, files, and preferences so you don't need to re-explain yourself every chat. The build has five parts, and none of them require anything beyond a Claude account:
+      </p>
+      <ul>
+        <li>Create a project: load your instructions and files in once and it remembers them for every conversation.</li>
+        <li>Pick a task that qualifies: something you've done at least 3 times in the last 2 weeks.</li>
+        <li>Let Claude write its own prompt: you describe what you want done, and Claude researches prompting best practices and writes the instructions for you.</li>
+        <li>Test it on an email from your inbox: so you can see how close the voice is.</li>
+        <li>Fine-tune as you go: every time you dislike an output, one new line in the instructions fixes it going forward.</li>
+      </ul>
+
+      <h2>Pick a task that qualifies</h2>
+      <p>
+        If you've done the same task 3 times in the last 2 weeks, it qualifies. That's the core rule we teach, and it saves you from trying to invent a project just to have one. The best first build automates something you already do by heart, because you'll know immediately whether the output is any good.
+      </p>
+      <p>
+        If nothing comes to mind right away, walk through every hour of your day from the moment you wake up. Somewhere in there you're repeating something: replying to the same kind of email, writing the same kind of listing, planning the same meals every Sunday.
+      </p>
+      <p>
+        Is a Claude Project the right home for your task? This is the quick check:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Your task looks like</th>
+            <th>Build it with</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A repeated chat task with the same instructions every time (emails, listings, plans)</td>
+            <td>A Claude Project (this guide)</td>
+          </tr>
+          <tr>
+            <td>A one-off deliverable: a doc, research, a summary</td>
+            <td>A plain chatbot conversation</td>
+          </tr>
+          <tr>
+            <td>Building or changing real files and software</td>
+            <td>Claude Code (see the architecture guide below)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Create the Claude Project</h2>
+      <p>
+        Go to claude.ai, click Projects in the sidebar, and create a new project named after the task, something like "Email Drafter." A project holds instructions, files, and memory that load into every conversation inside it, which is what turns it from a chat into a tool you can reuse.
+      </p>
+      <p>
+        Projects are the right fit when two things are true: the task follows the same instructions every time, and it comes back often enough that re-explaining it in a fresh chat would get annoying. Email replies pass both tests easily.
+      </p>
+
+      <h2>Let Claude write its own prompt</h2>
+      <p>
+        You don't need to write the instructions yourself. In the project chat, type something like "research prompting best practices, then write an email drafting prompt that always responds calmly and confidently." Claude searches for current best practices and writes a more thorough prompt than you would have written from scratch.
+      </p>
+      <p>
+        Then we need to make Claude write in your style, and the fastest way to do that is by providing it one good and one bad example of writing. The good example should read calm and own mistakes plainly. The bad example can be full of AI giveaway phrasing like "in today's fast-paced environment." Paste the exact quotes into the session where you're creating your prompt, and Claude will adhere to the writing style more strictly than if you just tell it "do this" and "don't do that."
+      </p>
+      <p>
+        Copy the finished prompt into the project's instructions and save it. If the prompt contains markdown symbols like # or **, leave them in; Claude reads them like normal language.
+      </p>
+
+      <div class="article-cta">
+        <p>This exact build is the first win we ask for in AI Builder Society, a free Skool community where you go from watching AI videos to a working AI assistant in about 10 minutes.</p>
+        <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary">Join AI Builder Society (free)</a>
+      </div>
+
+      <h2>Test it on an email from your inbox</h2>
+      <p>
+        Paste something from your inbox into the project chat rather than a made-up example. In the video I used a snarky "per my last email" message, and the drafter came back with a calm reply that owned the mistake and gave a specific timeline for the fix.
+      </p>
+      <p>
+        You don't have to send the output word for word. Treat it as a starting point in your voice, edit the details, and send it. The value of the project is that the starting point shows up instantly, every time.
+      </p>
+
+      <h2>Fine tune the result</h2>
+      <p>
+        When the assistant does something you don't like, add one line to the instructions telling it not to. One random example is if you didn't want it to promise specific delivery dates: you'd add a line like "don't ever promise a specific date of delivery" to the don't section, save, and it behaves that way from the next draft onward.
+      </p>
+      <p>
+        This is why the build gets better while you use it. You'll add a few of these lines over the first week, and after that it drafts the way you would.
+      </p>
+
+      <h2>Build it today</h2>
+      <p>
+        Your first AI build shouldn't take a weekend, and it shouldn't require code. Pick a task you've repeated 3 times in the last 2 weeks, set up a Claude Project for it, have Claude write its own instructions from a good and a bad example of your writing, and update the instructions as you go to fine-tune your results. The full 10-minute walkthrough is on YouTube: <a href="https://youtu.be/qbIp2pRZDkY" target="_blank" rel="noopener" class="textlink">watch the build start to finish</a>. And if you want the simplest place to learn how to start with AI alongside people doing the same thing, <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="textlink">join AI Builder Society for free</a> and post this build as your first win.
+      </p>
+
+      <h2 class="faq">FAQ</h2>
+      <div class="faq">
+        <h3>Do I need to know how to code to build my first AI tool?</h3>
+        <p>No. The whole build happens inside a Claude Project on claude.ai: you write instructions in plain language, Claude does the drafting, and no code shows up anywhere. The only requirement is a Claude account.</p>
+
+        <h3>What should my first AI build be?</h3>
+        <p>Automate a task you already repeat. The rule: if you've done the same task 3 times in the last 2 weeks, it qualifies. Email replies in your voice, meal planning, marketplace listings, and workout plans are all good first builds, because you already know what a good output looks like.</p>
+
+        <h3>How do I make Claude write in my style?</h3>
+        <p>Provide it one good and one bad example of writing. Paste the exact quotes into the session where you're creating your prompt, and Claude will adhere to the writing style more strictly than if you just tell it "do this" and "don't do that."</p>
+
+        <h3>What's the difference between a Claude Project and Claude Code?</h3>
+        <p>A Claude Project is a workspace inside claude.ai that remembers your instructions, files, and preferences, which fits repeated chat tasks like drafting emails. Claude Code builds and changes real files and systems in a folder on your computer. Start with a Project; move to Claude Code when you want to build software.</p>
+
+        <h3>How long does a first AI build take?</h3>
+        <p>About 10 minutes. Create the project, have Claude research prompting best practices and write its own instructions, paste in a good and a bad example of your writing, and test it on something from your inbox. The fine-tuning after that happens while you use it.</p>
+      </div>
+
+      <p>Related: <a href="/blog/how-to-build-anything-with-ai" class="textlink">how to build anything with AI (the architecture cheatsheet)</a> and <a href="/blog/free-skool-communities-for-ai-builders-2026" class="textlink">the best free Skool communities for AI builders</a>.</p>
+
+      <p style="margin-top:2.5rem;"><a href="/blog" class="textlink">← Back to all posts</a></p>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <h2>Learn to build with AI.</h2>
+      <a href="https://www.aibuildersociety.com" target="_blank" rel="noopener" class="btn btn-primary">Join AI Builder Society (free)</a>
+      <p class="copy">BEN ATTANASIO © 2026 · Austin, TX</p>
+    </div>
+  </footer>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/assets/track.js"></script>
+</body>
+</html>
