@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   background-color: var(--bg);
@@ -85,6 +85,7 @@ h1, h2, h3 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
   transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
   border: 1px solid transparent;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .btn-primary {
@@ -389,4 +390,17 @@ footer .copy { margin-top: 2.5rem; color: var(--text-dim); font-size: 0.8rem; op
   .topbar .wordmark { font-size: 0.95rem; }
   .hero { padding: 3.5rem 0 2.5rem; }
   section.block { padding: 3rem 0; }
+
+  /* long CTA labels wrap instead of forcing horizontal scroll */
+  .btn { white-space: normal; text-align: center; }
+  .topbar .btn-sm { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
+  .topbar-inner { gap: 0.75rem; }
+
+  /* wide tables scroll inside themselves, not the whole page */
+  .article table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .article th, .article td { padding: 0.65rem 0.75rem; }
 }
