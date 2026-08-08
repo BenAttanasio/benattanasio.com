@@ -348,6 +348,26 @@ footer .copy { margin-top: 2.5rem; color: var(--text-dim); font-size: 0.8rem; op
 }
 .article tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
 
+/* video embeds keep their 16:9 box and never widen the page */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* in-article CTA */
 .article-cta {
   background: var(--bg-soft);
