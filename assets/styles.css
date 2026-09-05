@@ -426,7 +426,7 @@ footer .copy { margin-top: 2.5rem; color: var(--text-dim); font-size: 0.8rem; op
 }
 
 /* ============================================================
-   Cohort page (/cohort): waitlist form + week list
+   Cohort page (/cohort)
    ============================================================ */
 .waitlist { max-width: 560px; margin: 0 auto; }
 .waitlist .hp { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; }
@@ -449,25 +449,56 @@ footer .copy { margin-top: 2.5rem; color: var(--text-dim); font-size: 0.8rem; op
 .waitlist-msg { margin-top: 0.4rem; font-size: 0.9rem; min-height: 1.3em; color: var(--text-dim); }
 .waitlist-msg.ok { color: var(--accent-2); }
 .waitlist-msg.err { color: #e0b341; }
-
+.hero-fine { margin-top: 1.4rem; color: var(--text-dim); font-size: 0.9rem; }
 footer .waitlist { margin-bottom: 0.5rem; }
 
-.weeks {
-  list-style: none;
-  counter-reset: wk;
-  margin: 2rem 0 2rem;
-  display: grid;
-  gap: 1rem;
-  max-width: 760px;
+#task .lead + .lead { margin-top: 1rem; color: var(--text); }
+
+.cards { display: grid; gap: 1.25rem; margin-top: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 1.1rem 1.1rem 1.4rem;
 }
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
+  background: #fff;
+}
+.card img.fit { object-fit: contain; object-position: center; padding: 0.5rem; }
+.card h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+.card p { color: var(--text-dim); font-size: 0.95rem; }
+
+.weeks-wrap { display: grid; gap: 2.5rem; align-items: center; grid-template-columns: 1fr; }
+.weeks-img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  justify-self: center;
+  background: #fff;
+}
+.weeks { list-style: none; margin: 1.5rem 0 1.5rem; display: grid; gap: 0.6rem; max-width: 520px; }
 .weeks li {
+  display: flex; gap: 1rem; align-items: baseline;
   background: var(--bg-soft);
   border: 1px solid var(--border-soft);
-  border-radius: 14px;
-  padding: 1.1rem 1.3rem;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
 }
-.weeks li strong { display: block; margin-bottom: 0.25rem; }
-.weeks li span { color: var(--text-dim); font-size: 0.95rem; }
+.weeks li strong { color: var(--accent-2); flex: 0 0 4.2rem; }
+.weeks li span { color: var(--text); }
 
 .faq p { color: var(--text-dim); margin-bottom: 0.5rem; }
 #faq h2 { margin-bottom: 0.5rem; }
+
+@media (min-width: 820px) {
+  .weeks-wrap { grid-template-columns: 1.1fr 0.9fr; }
+}
