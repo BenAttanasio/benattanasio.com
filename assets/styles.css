@@ -464,26 +464,23 @@ footer .waitlist { margin-bottom: 0.5rem; }
 .card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   border-radius: 10px;
-  border: 1px solid var(--border);
   margin-bottom: 1rem;
-  background: #fff;
+  background: #212821;
 }
-.card img.fit { object-fit: contain; object-position: center; padding: 0.5rem; }
 .card h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
 .card p { color: var(--text-dim); font-size: 0.95rem; }
 
 .weeks-wrap { display: grid; gap: 2.5rem; align-items: center; grid-template-columns: 1fr; }
 .weeks-img {
   width: 100%;
-  max-width: 420px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  max-width: 460px;
+  border-radius: 16px;
   justify-self: center;
-  background: #fff;
+  background: #212821;
 }
 .weeks { list-style: none; margin: 1.5rem 0 1.5rem; display: grid; gap: 0.6rem; max-width: 520px; }
 .weeks li {
