@@ -5,6 +5,7 @@
 ## Pages
 
 - [Home](https://benattanasio.com/): Build your first working AI assistant in about 10 minutes through AI Builder Society, a free community run by Ben Attanasio.
+- [Cohort](https://benattanasio.com/cohort): Become the AI person at your company. A 30-day cohort inside AI Builder Society: one recurring task from your job, built on the AI tools your company already allows, running at work by day 30, with a Time Saved Tracker and a resume line. Cohort 001 is $30.
 - [Blog](https://benattanasio.com/blog): Practical guides on building with AI, n8n automations, Claude Code, and learning to build in a free community.
 
 ## Blog
