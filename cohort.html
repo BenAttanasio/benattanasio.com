@@ -207,7 +207,20 @@
   <script>
   (function () {
     "use strict";
+    // When enrollment opens: paste the Stripe Payment Link URL here and redeploy.
+    // Every waitlist form turns into an "Enroll for $30" button. Empty string = waitlist mode.
+    var ENROLL_URL = "";
     var forms = document.querySelectorAll("form.waitlist");
+    if (ENROLL_URL) {
+      for (var f = 0; f < forms.length; f++) {
+        var wrap = document.createElement("div");
+        wrap.className = "enroll";
+        wrap.innerHTML = '<a class="btn btn-primary" href="' + ENROLL_URL + '">Enroll for $30</a>' +
+          '<p class="waitlist-count">Enrollment is open. $30, one payment, money back if you do the work and nothing is running by day 30.</p>';
+        forms[f].parentNode.replaceChild(wrap, forms[f]);
+      }
+      return;
+    }
     var counters = document.querySelectorAll(".waitlist-count");
 
     function renderCount(count, goal) {
