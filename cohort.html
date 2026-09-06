@@ -226,7 +226,7 @@
     function renderCount(count, goal) {
       var text;
       if (count >= goal) text = count + " people on the list. Enrollment is opening.";
-      else if (count === 1) text = "1 person on the list. Enrollment opens at " + goal + ".";
+      else if (count < 3) text = "Enrollment opens when " + goal + " people are on the list.";
       else text = count + " people on the list. Enrollment opens at " + goal + ".";
       for (var i = 0; i < counters.length; i++) counters[i].textContent = text;
     }
